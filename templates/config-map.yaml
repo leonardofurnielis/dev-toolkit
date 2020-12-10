@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: "{{.Chart.Name}}-{{ .Release.Name }}"
+  namespace: default
+  labels:
+    app: "{{.Chart.Name}}-{{.Chart.Version}}"
+    release: "{{ .Release.Name }}"
+data:
+  allowed: '"true"'
+  enemies: aliens

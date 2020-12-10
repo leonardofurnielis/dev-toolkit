@@ -1,0 +1,8 @@
+appVersion: v1
+name: kubernetes-helm-template
+version: 1.0.0
+keywords:
+  - kubernetes-helm-template
+maintainers:
+  - name: Leonardo Furnielis
+    email: leonardofurnielis@outlook.com

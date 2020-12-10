@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "{{.Chart.Name}}-{{.Chart.Version}}"
+  namespace: "{{.Values.namespace}}"
+  labels:
+    app: "{{.Chart.Name}}-{{.Chart.Version}}"
+    release: "{{ .Release.Name }}"
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: "{{.Chart.Name}}-{{.Chart.Version}}"
+      release: {{ .Release.Name | quote }}
+  template:
+    metadata:
+      labels:
+        app: "{{.Chart.Name}}-{{.Chart.Version}}"
+        release: {{ .Release.Name | quote }}
+    spec:
+      containers:
+        - name: {{ .Values.name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+          - name: NODE_ENV
+            value: "{{ .Values.env.NODE_ENV }}"
+          # - name: CONFIG_MAP
+            # valueFrom:
+              # configMapKeyRef:
+                # name: 
+                # key:
+          # - name: SECRET
+            # valueFrom:
+              # secretKeyRef:
+                # name: 
+                # key:
+          ports:
+            - name: http
+              containerPort: {{ .Values.port }}
+              protocol: TCP
+          resources:
+            requests:
+              cpu: {{ .Values.resources.requests.cpu }}
+              memory: {{ .Values.resources.requests.memory }}
+            limits:
+              cpu: {{ .Values.resources.limits.cpu }}
+              memory: {{ .Values.resources.limits.memory }}

@@ -1,0 +1,37 @@
+# Default values.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: 
+  tag: 
+  pullPolicy: Always
+
+service:
+  name: "hello-world"
+  namespace: "default"
+  ingressDomain: 
+  ingressSecretName: 
+  loadBalancerIP: 
+  type: LoadBalancer
+  port: 80
+
+# Set extra env variables. Like proxy settings.
+env:
+  NODE_ENV: production
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 256Mi
+  limits:
+    cpu: 150m
+    memory: 512Mi
+
+podAutoscaler:
+  memoryTargetUtilization: 75
+  cpuTargetUtilization: 120
+  minReplicas: 2
+  maxReplicas: 5
