@@ -1,4 +1,4 @@
-FROM python:3.8.9-slim-buster
+FROM registry.hub.docker.com/library/python:3.8.9
 
 # Flask application
 WORKDIR /home/vcap/app
