@@ -1,6 +1,6 @@
 FROM python:3.8.9-slim-buster
 
-# Flask demo application
+# Flask application
 WORKDIR /home/vcap/app
 
 COPY requirements.txt ./
