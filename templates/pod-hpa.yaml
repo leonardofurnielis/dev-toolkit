@@ -1,7 +1,7 @@
-apiVersion: autoscaling/v2beta2
+apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: "{{.Chart.Name}}-{{.Chart.Version}}"
+  name: "{{.Chart.Name}}-{{.Chart.Version}}-hpa"
   namespace: "{{.Values.namespace}}"
   labels:
     app: "{{.Chart.Name}}-{{.Chart.Version}}"
@@ -16,9 +16,13 @@ spec:
   metrics:
   - type: Resource
     resource:
-      name: memory
-      targetAverageUtilization: {{.Values.metrics.memoryTargetUtilization}}
+      name: cpu
+      target:
+        type: Utilization 
+        averageUtilization: {{.Values.metrics.cpuTargetUtilization}}
   - type: Resource
     resource:
-      name: cpu
-      targetAverageUtilization: {{.Values.metrics.cpuTargetUtilization}}
+      name: memory
+      target:
+        type: Utilization 
+        averageUtilization: {{.Values.metrics.memoryTargetUtilization}}   
