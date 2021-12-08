@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: "{{.Chart.Name}}-{{.Chart.Version}}"
+  name: "{{.Chart.Name}}-{{.Chart.Version}}-deployment"
   namespace: "{{.Values.namespace}}"
   labels:
     app: "{{.Chart.Name}}-{{.Chart.Version}}"
