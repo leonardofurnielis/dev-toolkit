@@ -10,8 +10,8 @@ image:
   pullPolicy: Always
 
 service:
-  name: "hello-world"
-  namespace: "default"
+  name: "helm-chart"
+  namespace: "helm-chart"
   ingressDomain: 
   ingressSecretName: 
   loadBalancerIP: 

@@ -1,6 +1,6 @@
-FROM node:14.15.1-alpine AS builder
+FROM node:16.18.0-alpine3.15 AS builder
 
-WORKDIR /usr
+WORKDIR /opt/app-root
 
 COPY package.json ./
 
@@ -16,10 +16,10 @@ FROM nginx:1.16.0-alpine
 
 RUN rm -rf /usr/share/nginx/html/*
 
-COPY --from=builder /usr/dist /usr/share/nginx/html
-COPY --from=builder /usr/src/static/Staticfile /usr/share/nginx/html
+COPY --from=builder /opt/app-root/dist /usr/share/nginx/html
+COPY --from=builder /opt/app-root/src/static/Staticfile /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-# COPY --from=builder /usr/src/static/nginx.config /etc/nginx/conf.d/
+# COPY --from=builder /opt/app-rootusr/src/static/nginx.config /etc/nginx/conf.d/
 
 COPY . .
 

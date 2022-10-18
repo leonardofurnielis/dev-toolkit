@@ -1,8 +1,8 @@
 appVersion: v1
-name: kubernetes-helm-template
+name: helm-chart
 version: 1.0.0
 keywords:
-  - kubernetes-helm-template
+  - helm-chart
 maintainers:
   - name: Leonardo Furnielis
     email: leonardofurnielis@outlook.com
