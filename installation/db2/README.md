@@ -32,7 +32,7 @@ https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/in
 | /usr | 10G |
 | / | 10G |
 
-## 1. Update Linux and install pre-requirements
+## Update Linux and install pre-requirements
 
 **For Db2 installation guide, the user `root` will be used to perform the actions.**
 
@@ -50,18 +50,18 @@ Check if Db2 pre-requirements are met.
 https://www.ibm.com/docs/en/db2/11.5?topic=commands-db2prereqcheck-check-installation-prerequisites
 
 <sub>** -l: Check prerequisite for latest DB2 version.</sub> \
-** -i: Check prerequisite for non pureScale installation. \
+<sub>** -i: Check prerequisite for non pureScale installation.<sub> 
 
 ```bash
 # ./server_dec/db2prereqcheck -i -l
 ```
 
-## 2. Installing Db2
+## Installing Db2
 
 https://www.ibm.com/docs/en/db2/11.1?topic=commands-db2-install-install-db2-database-product
  
-** -y: Specifies that you have read and agreed to the license agreement. \
-** -b: Specifies the path where the Db2 database product is to be installed. \
+<sub>** -y: Specifies that you have read and agreed to the license agreement.</sub> \
+<sub>** -b: Specifies the path where the Db2 database product is to be installed.</sub> 
 ```bash
 # ./server_dec/db2_install -y -b /opt/ibm/db2/V11.5.4/
 
@@ -86,25 +86,25 @@ Do you want to install the DB2 pureScale feature? [yes/no]
 no
 ```
 
-## 3. Apply license to IBM Db2
+## Apply license to IBM Db2
 
 https://www.ibm.com/docs/en/db2/11.5?topic=licenses-db2licm-license-management-tool-command
 
 Check actual license
 
--l: Lists all the products with available license information.
+<sub>**-l: Lists all the products with available license information.</sub>
 ```bash
 # /opt/ibm/db2/V11.5.4/adm/db2licm -l
 ```
 
--a: Adds a license for a product.
+<sub>**-a: Adds a license for a product.</sub>
 ```bash
 # /opt/ibm/db2/V11.5.4/adm/db2licm -a db2_license.lic
 ```
 
 Removing community license
 
--r: Removes the license for a product.
+<sub>**-r: Removes the license for a product.</sub>
 ```bash
 # /opt/ibm/db2/V11.5.4/adm/db2licm -r db2dec
 ```
