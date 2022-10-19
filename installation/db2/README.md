@@ -13,7 +13,8 @@ This guide contains a [shell script](https://github.com/leonardofurnielis/toolki
 6. [Additional resources](#additional-resources) \
     6.1 [Create database](#create-database) \
     6.2 [Connect to database](#connect-to-database) \
-    6.3 [Deactivate database](#deactivate-database)
+    6.3 [Deactivate database](#deactivate-database) \
+7. [Containerized deployment](#containerized-deployment)
 
 ### The environment used in this guide.
 
@@ -172,4 +173,16 @@ $ db2 "select * from db2inst1.dept"
 
 ```bash
 $ db2 deactivate db sample
+```
+
+## Containerized deployment
+
+https://www.ibm.com/docs/en/db2/11.5?topic=db2-containerized-deployments
+
+```bash
+$ docker pull ibmcom/db2
+```
+
+```bash
+$ docker run -itd --name db2server --privileged=true -p 50000:50000 -e LICENSE=accept -e DB2INST1_PASSWORD=passwd@22 -e DBNAME=bludb -v /home/db2inst1:/database ibmcom/db2
 ```
