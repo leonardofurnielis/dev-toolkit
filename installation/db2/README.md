@@ -5,12 +5,12 @@
 
 This guide contains a [shell script](https://github.com/leonardofurnielis/toolkit/blob/master/installation/db2/db2-installation.sh) automation to install Db2 on Linux. You can run it manually following the steps:
 
-1. Update Linux and install pre-requirements
+1. [Update Linux and install pre-requirements](#update-linux-and-install-pre-requirements)
 2. Installing Db2
 3. Apply license to IBM Db2
 4. Creating group and user for db2 instance (db2inst1)
 5. Creating db2 instance (db2inst1)
-6. Additional resources
+6. Additional resources \
     6.1 Create database
     6.2 Connect to database
     6.3 Deactivate database
