@@ -49,8 +49,8 @@ https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/in
 Check if Db2 pre-requirements are met.
 https://www.ibm.com/docs/en/db2/11.5?topic=commands-db2prereqcheck-check-installation-prerequisites
 
-<sub>** -l: Check prerequisite for latest DB2 version.</sub> \
-<sub>** -i: Check prerequisite for non pureScale installation.<sub> 
+<sub>** -l: Check prerequisite for latest DB2 version. \
+** -i: Check prerequisite for non pureScale installation.</sub> 
 
 ```bash
 # ./server_dec/db2prereqcheck -i -l
@@ -60,8 +60,8 @@ https://www.ibm.com/docs/en/db2/11.5?topic=commands-db2prereqcheck-check-install
 
 https://www.ibm.com/docs/en/db2/11.1?topic=commands-db2-install-install-db2-database-product
  
-<sub>** -y: Specifies that you have read and agreed to the license agreement.</sub> \
-<sub>** -b: Specifies the path where the Db2 database product is to be installed.</sub> 
+<sub>** -y: Specifies that you have read and agreed to the license agreement. \
+** -b: Specifies the path where the Db2 database product is to be installed.</sub> 
 ```bash
 # ./server_dec/db2_install -y -b /opt/ibm/db2/V11.5.4/
 
