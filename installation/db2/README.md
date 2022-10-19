@@ -21,7 +21,7 @@ This guide contains a shell script automation to install Db2 on Linux. You can r
 (https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/installation_guide/s2-diskpartrecommend-x86)
 
 | Filesystem | Size |
-| ------ |------|---------| ------------ |
+| ------ |------|
 | swap | 4G | 
 | /boot| 1G |
 | /tmp | 5G | 
