@@ -11,9 +11,9 @@ This guide contains a [shell script](https://github.com/leonardofurnielis/toolki
 4. Creating group and user for db2 instance (db2inst1)
 5. Creating db2 instance (db2inst1)
 6. Additional resources
-6.1 Create database
-6.2 Connect to database
-6.3 Deactivate database
+    6.1 Create database
+    6.2 Connect to database
+    6.3 Deactivate database
 
 ### The environment used in this guide.
 
