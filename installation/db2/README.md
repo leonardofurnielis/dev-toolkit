@@ -6,13 +6,13 @@
 This guide contains a [shell script](https://github.com/leonardofurnielis/toolkit/blob/master/installation/db2/db2-installation.sh) automation to install Db2 on Linux. You can run it manually following the steps:
 
 1. [Update Linux and install pre-requirements](#update-linux-and-install-pre-requirements)
-2. Installing Db2
+2. [Installing Db2](#installing-db2)
 3. Apply license to IBM Db2
 4. Creating group and user for db2 instance (db2inst1)
 5. Creating db2 instance (db2inst1)
 6. Additional resources \
-    6.1 Create database
-    6.2 Connect to database
+    6.1 Create database \
+    6.2 Connect to database \
     6.3 Deactivate database
 
 ### The environment used in this guide.
@@ -49,8 +49,8 @@ https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/in
 Check if Db2 pre-requirements are met.
 https://www.ibm.com/docs/en/db2/11.5?topic=commands-db2prereqcheck-check-installation-prerequisites
 
--l: Check prerequisite for latest DB2 version.
--i: Check prerequisite for non pureScale installation.
+<sub>** -l: Check prerequisite for latest DB2 version.</sub> \
+** -i: Check prerequisite for non pureScale installation. \
 
 ```bash
 # ./server_dec/db2prereqcheck -i -l
@@ -60,8 +60,8 @@ https://www.ibm.com/docs/en/db2/11.5?topic=commands-db2prereqcheck-check-install
 
 https://www.ibm.com/docs/en/db2/11.1?topic=commands-db2-install-install-db2-database-product
  
--y: Specifies that you have read and agreed to the license agreement.
--b: Specifies the path where the Db2 database product is to be installed.
+** -y: Specifies that you have read and agreed to the license agreement. \
+** -b: Specifies the path where the Db2 database product is to be installed. \
 ```bash
 # ./server_dec/db2_install -y -b /opt/ibm/db2/V11.5.4/
 
