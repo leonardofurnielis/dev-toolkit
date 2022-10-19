@@ -3,7 +3,7 @@
 
   
 
-This guide contains a [shell script](https://github.com/leonardofurnielis/toolkit/blob/master/installation/db2/db2-installation.sh) automation to install Db2 on Linux. You can run it manually following the steps:
+This guide contains a [shell script](https://github.com/leonardofurnielis/toolkit/blob/master/installation/db2/db2-installation.sh) automation to install Db2 (non pureScale) on Linux. You can run it manually following the steps:
 
 1. [Update Linux and install pre-requirements](#update-linux-and-install-pre-requirements)
 2. [Installing Db2](#installing-db2)
@@ -131,10 +131,10 @@ https://www.ibm.com/docs/en/db2/11.5?topic=commands-db2ilist-list-instances
 Create database instance.
 https://www.ibm.com/docs/en/db2/11.5?topic=commands-db2icrt-create-instance
 
-<sub>**-a: Specifies the authentication type.</sub> \
-<sub>**-s: Specifies the type of instance to create.</sub> \
-<sub>**-u: Specifies the name of the user ID under which fenced user-defined.</sub> \
-<sub>**-p: Specifies the TCP/IP port name or number that is used by the instance.</sub>
+<sub>**-a: Specifies the authentication type. \
+**-s: Specifies the type of instance to create. \
+**-u: Specifies the name of the user ID under which fenced user-defined. \
+**-p: Specifies the TCP/IP port name or number that is used by the instance.</sub>
 ```bash
 # /opt/ibm/db2/V11.5.4.0/instance/db2icrt -a server -s ese -u db2fenc -p 50000 db2inst1
 ```
