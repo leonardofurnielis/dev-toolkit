@@ -7,13 +7,13 @@ This guide contains a [shell script](https://github.com/leonardofurnielis/toolki
 
 1. [Update Linux and install pre-requirements](#update-linux-and-install-pre-requirements)
 2. [Installing Db2](#installing-db2)
-3. Apply license to IBM Db2
-4. Creating group and user for db2 instance (db2inst1)
-5. Creating db2 instance (db2inst1)
-6. Additional resources \
-    6.1 Create database \
-    6.2 Connect to database \
-    6.3 Deactivate database
+3. [Apply license to IBM Db2](#apply-license-to-ibm-db2)
+4. [Creating group and user for db2 instance (db2inst1)](#creating-group-and-user-for-db2-instance-db2inst1)
+5. [Creating db2 instance (db2inst1)](#creating-db2-instance-db2inst1)
+6. [Additional resources](#additional-resources) \
+    6.1 [Create database](#create-database) \
+    6.2 [Connect to database](#connect-to-database) \
+    6.3 [Deactivate database](#deactivate-database)
 
 ### The environment used in this guide.
 
@@ -109,7 +109,7 @@ Removing community license
 # /opt/ibm/db2/V11.5.4/adm/db2licm -r db2dec
 ```
 
-## 4. Creating group and user for db2 instance (db2inst1)
+## Creating group and user for db2 instance (db2inst1)
 
 ```bash
 # groupadd -g 1001 db2iadm1
@@ -119,7 +119,7 @@ Removing community license
 # useradd -g db2fadm1 -u 1002 -d /home/db2fenc -s /bin/bash db2fenc
 ```
 
-## 5. Creating db2 instance (db2inst1)
+## Creating db2 instance (db2inst1)
 
 List db2 instances.
 https://www.ibm.com/docs/en/db2/11.5?topic=commands-db2ilist-list-instances
@@ -131,20 +131,19 @@ https://www.ibm.com/docs/en/db2/11.5?topic=commands-db2ilist-list-instances
 Create database instance.
 https://www.ibm.com/docs/en/db2/11.5?topic=commands-db2icrt-create-instance
 
--a: Specifies the authentication type.
--s: Specifies the type of instance to create.
--u: Specifies the name of the user ID under which fenced user-defined.
--p: Specifies the TCP/IP port name or number that is used by the instance.
-
+<sub>**-a: Specifies the authentication type.</sub> \
+<sub>**-s: Specifies the type of instance to create.</sub> \
+<sub>**-u: Specifies the name of the user ID under which fenced user-defined.</sub> \
+<sub>**-p: Specifies the TCP/IP port name or number that is used by the instance.</sub>
 ```bash
 # /opt/ibm/db2/V11.5.4.0/instance/db2icrt -a server -s ese -u db2fenc -p 50000 db2inst1
 ```
 
-## 6. Additional resources
+## Additional resources
 
 **For additional resources, the user `db2inst1` will be used to perform the actions.**
 
-### 6.1 Create database
+### Create database
 
 ```bash
 $ db2set -all
@@ -160,7 +159,7 @@ $ db2 activate db sample
 $ db2 list active databases
 ```
 
-### 6.2 Connect to database
+### Connect to database
 
 ```bash
 $ db2 connect to sample
@@ -169,7 +168,7 @@ $ db2 list tables for schema db2inst1
 $ db2 "select * from db2inst1.dept"
 ```
 
-### 6.3 Deactivate database
+### Deactivate database
 
 ```bash
 $ db2 deactivate db sample
