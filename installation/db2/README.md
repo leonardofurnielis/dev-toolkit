@@ -1,7 +1,5 @@
 
-# Db2 installation guide
-
-  
+# Db2 installation guide 
 
 This guide contains a [shell script](https://github.com/leonardofurnielis/toolkit/blob/master/installation/db2/db2-installation.sh) automation to install Db2 (non pureScale) on Linux. You can run it manually following the steps:
 
