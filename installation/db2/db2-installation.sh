@@ -55,7 +55,7 @@ echo "*******************************************************"
 /home/db2install/server_dec/db2_install -y -b /opt/ibm/db2/V$DB2_VERSION/
 
 echo "*******************************************************"
-echo "Apply license to IBM Db2"
+echo "Applying license to IBM Db2"
 echo "*******************************************************"
 /opt/ibm/db2/V$DB2_VERSION/adm/db2licm -l
 
