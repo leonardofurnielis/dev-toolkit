@@ -9,9 +9,10 @@ This guide contains a [shell script](https://github.com/leonardofurnielis/toolki
 4. [Creating group and user for db2 instance (db2inst1)](#creating-group-and-user-for-db2-instance-db2inst1)
 5. [Creating db2 instance (db2inst1)](#creating-db2-instance-db2inst1)
 6. [Additional resources](#additional-resources) \
-    6.1 [Create database](#create-database) \
-    6.2 [Connect to database](#connect-to-database) \
-    6.3 [Deactivate database](#deactivate-database) \
+    6.1 [Running Db2 instance](#running-db2-instance) \
+    6.2 [Create database](#create-database) \
+    6.3 [Connect to database and querying](#connect-to-database-and-querying) \
+    6.4 [Deactivate database](#deactivate-database) \
 7. [Containerized deployment](#containerized-deployment)
 
 ### The environment used in this guide.
@@ -142,13 +143,15 @@ https://www.ibm.com/docs/en/db2/11.5?topic=commands-db2icrt-create-instance
 
 **For additional resources, the user `db2inst1` will be used to perform the actions.**
 
-### Create database
+### Running Db2 instance
 
 ```bash
 db2set -all
 db2 get dbm cfg
 db2start
 ```
+
+### Create database
 
 ```bash
 db2sampl -sql
@@ -158,7 +161,7 @@ db2 activate db sample
 db2 list active databases
 ```
 
-### Connect to database
+### Connect to database and querying
 
 ```bash
 db2 connect to sample
