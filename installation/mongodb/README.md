@@ -4,6 +4,7 @@
 2. [Installing MongoDb](#installing-mongodb)
 3. [Running MongoDb instance](#running-mongodb-instance)
 4. [Additional resources](#additional-resources)
+5. [Containerized deployment](#containerized-deployment)
 
 ### The environment used in this guide.
 
@@ -66,3 +67,11 @@ systemctl status mongod
 ```
 
 ## Additional resources
+
+## Containerized deployment
+
+```
+podman pull mongo
+
+podman run --name mongo-server -v /Documents/mongo/data:/data/db -d mongo
+```
