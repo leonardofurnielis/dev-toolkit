@@ -5,7 +5,7 @@
 3. [Additional resources](#additional-resources) \
     3.1 [Running MongoDb instance](#running-mongodb-instance) \
     3.2 [Status of MongoDb instance](#status-of-mongodb-instance) \
-    3.3 [Stop of MongoDb instance](#stop-of-mongodb-instance) \
+    3.3 [Stop of MongoDb instance](#stop-of-mongodb-instance)
 4. [Containerized deployment](#containerized-deployment)
 
 ### The environment used in this guide.
