@@ -2,9 +2,11 @@
 
 1. [Update Linux](#update-linux)
 2. [Installing MongoDb](#installing-mongodb)
-3. [Running MongoDb instance](#running-mongodb-instance)
-4. [Additional resources](#additional-resources)
-5. [Containerized deployment](#containerized-deployment)
+3. [Additional resources](#additional-resources)
+    3.1 [Running MongoDb instance](#running-mongodb-instance)
+    3.2 [Status of MongoDb instance](#status-of-mongodb-instance)
+    3.3 [Stop of MongoDb instance](#stop-of-mongodb-instance)
+4. [Containerized deployment](#containerized-deployment)
 
 ### The environment used in this guide.
 
@@ -58,15 +60,23 @@ Add the following instructions to your `/etc/yum.conf` file:
 exclude=mongodb-org,mongodb-org-database,mongodb-org-server,mongodb-mongosh,mongodb-org-mongos,mongodb-org-tools
 ```
 
-## Running MongoDb instance
+## Additional resources
+
+### Running MongoDb instance
 
 ```
 systemctl start mongod
+```
 
+### Status of MongoDb instance
+```
 systemctl status mongod
 ```
 
-## Additional resources
+### Stop of MongoDb instance
+```
+systemctl stop mongod
+```
 
 ## Containerized deployment
 
