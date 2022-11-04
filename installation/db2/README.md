@@ -13,6 +13,7 @@ This guide contains a [shell script](https://github.com/leonardofurnielis/toolki
     6.2 [Create database](#create-database) \
     6.3 [Connect to database and querying](#connect-to-database-and-querying) \
     6.4 [Deactivate database](#deactivate-database) \
+    6.5 [Stop database instance](#stop-database-instance) \
 7. [Containerized deployment](#containerized-deployment)
 
 ### The environment used in this guide.
@@ -174,6 +175,12 @@ db2 "select * from db2inst1.dept"
 
 ```bash
 db2 deactivate db sample
+```
+
+### Stop database instance
+
+```bash
+db2stop
 ```
 
 ## Containerized deployment
