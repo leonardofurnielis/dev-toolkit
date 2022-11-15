@@ -1,0 +1,10 @@
+npm-debug.log
+npm-debug.log*
+coverage
+.DS_Store
+.vscode/
+node_modules/
+*.log
+*.tmp
+*.lcov
+.env
