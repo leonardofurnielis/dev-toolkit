@@ -2,8 +2,6 @@
 
 const jwt = require("jsonwebtoken");
 const RSA = require("node-rsa");
-const path = require("path");
-const fs = require("fs");
 
 const getToken = async (req, res, next) => {
   try {
